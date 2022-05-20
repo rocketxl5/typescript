@@ -1,22 +1,15 @@
-const person: {
-  name: string;
-  age: number;
-} = {
-  name: 'Maxime Gaillard',
-  age: 45,
-  hobbies: ['Coding', 'Biking']
-};
+console.log('Hello world');
 
-// Define an array of strings
-let favoriteActivities: string[];
-// Type error, 5 is number
-favoriteActivities = ['Coding', 5];
-
-for (const hobby of person.hobbies) {
-  console.log(hobby.toUpperCase());
+function add(input1: number, input2: number) {
+  if (typeof input1 !== 'number' || typeof input2 !== 'number') {
+    throw new Error('incorrect input');
+  }
+  return input1 + input2;
 }
 
-let anyThing: any[];
-anyThing = [0, 'Hello', false];
+const num1 = '10';
+const num2 = 20;
 
-console.log(person.name);
+const result = add(num1, num2);
+
+console.log(result);
